@@ -109,9 +109,18 @@
                         Console.WriteLine("Digite o segundo número: ");
                         segundoNumeroString = Console.ReadLine();
                         segundoNumero = Convert.ToDecimal(segundoNumeroString);
+                        if (primeiroNumero == 0 || segundoNumero == 0)
+                        {
+                            Console.WriteLine("A operação é inválida!");
+                            operador = "4";
+                        }
+                        else
+                        {
 
-                        resultado = primeiroNumero / segundoNumero;
-                        Console.WriteLine("O resultado da sua operação é: " + resultado.ToString("F"));
+                            resultado = primeiroNumero / segundoNumero;
+                            Console.WriteLine("O resultado da sua operação é: " + resultado.ToString("F"));
+
+                        }
 
                         Console.WriteLine("Deseja continuar? (S/N)");
                         repeat = Console.ReadLine();
