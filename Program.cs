@@ -24,12 +24,12 @@
                         Console.WriteLine("Adição\nDigite o primeiro número: ");
 
                         string primeiroNumeroString = Console.ReadLine();
-                        decimal primeiroNumero = Convert.ToDecimal(primeiroNumeroString);
+                        double primeiroNumero = Convert.ToDouble(primeiroNumeroString);
                         Console.WriteLine("Digite o segundo número: ");
                         string segundoNumeroString = Console.ReadLine();
-                        decimal segundoNumero = Convert.ToDecimal(segundoNumeroString);
+                        double segundoNumero = Convert.ToDouble(segundoNumeroString);
 
-                        decimal resultado = primeiroNumero + segundoNumero;
+                        double resultado = primeiroNumero + segundoNumero;
                         Console.WriteLine("O resultado da sua operação é: " + resultado.ToString("F"));
 
                         Console.WriteLine("Deseja continuar? (S/N)");
@@ -51,10 +51,10 @@
                         Console.WriteLine("Subtração\nDigite o primeiro número: ");
 
                         primeiroNumeroString = Console.ReadLine();
-                        primeiroNumero = Convert.ToDecimal(primeiroNumeroString);
+                        primeiroNumero = Convert.ToDouble(primeiroNumeroString);
                         Console.WriteLine("Digite o segundo número: ");
                         segundoNumeroString = Console.ReadLine();
-                        segundoNumero = Convert.ToDecimal(segundoNumeroString);
+                        segundoNumero = Convert.ToDouble(segundoNumeroString);
 
                         resultado = primeiroNumero - segundoNumero;
                         Console.WriteLine("O resultado da sua operação é: " + resultado.ToString("F"));
@@ -78,10 +78,10 @@
                         Console.WriteLine("Multiplicação\nDigite o primeiro número: ");
 
                         primeiroNumeroString = Console.ReadLine();
-                        primeiroNumero = Convert.ToDecimal(primeiroNumeroString);
+                        primeiroNumero = Convert.ToDouble(primeiroNumeroString);
                         Console.WriteLine("Digite o segundo número: ");
                         segundoNumeroString = Console.ReadLine();
-                        segundoNumero = Convert.ToDecimal(segundoNumeroString);
+                        segundoNumero = Convert.ToDouble(segundoNumeroString);
 
                         resultado = primeiroNumero * segundoNumero;
                         Console.WriteLine("O resultado da sua operação é: " + resultado.ToString("F"));
@@ -105,10 +105,10 @@
                         Console.WriteLine("Divisão\nDigite o primeiro número: ");
 
                         primeiroNumeroString = Console.ReadLine();
-                        primeiroNumero = Convert.ToDecimal(primeiroNumeroString);
+                        primeiroNumero = Convert.ToDouble(primeiroNumeroString);
                         Console.WriteLine("Digite o segundo número: ");
                         segundoNumeroString = Console.ReadLine();
-                        segundoNumero = Convert.ToDecimal(segundoNumeroString);
+                        segundoNumero = Convert.ToDouble(segundoNumeroString);
                         if (primeiroNumero == 0 || segundoNumero == 0)
                         {
                             Console.WriteLine("A operação é inválida!");
