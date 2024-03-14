@@ -6,10 +6,10 @@
         {
 
             Console.WriteLine("Calculadora Tabajara 2024\nSelecione uma opção:");
-            Console.WriteLine("1- Adição.\n2- Subtração.\n3- Multiplicação.\n4- Divisão.\n5- Fechar.");
+            Console.WriteLine("1- Adição.\n2- Subtração.\n3- Multiplicação.\n4- Divisão.\n5- Fechar.\n");
 
-            bool controlador;
-
+            bool controlador = true;
+            Console.WriteLine("Digite: ");
             string operador = Console.ReadLine();
 
 
@@ -34,7 +34,7 @@
 
                         Console.WriteLine("Deseja continuar? (S/N)");
                         string repeat = Console.ReadLine();
-                        Console.ReadLine();
+
 
                         if (repeat == "S" || repeat == "s")
                         {
@@ -42,9 +42,10 @@
                         }
                         else
                         {
-                            return;
+                            controlador = false;
                         }
                         break;
+                       
 
                     case "2":
                         Console.Clear();
@@ -61,15 +62,10 @@
 
                         Console.WriteLine("Deseja continuar? (S/N)");
                         repeat = Console.ReadLine();
-                        Console.ReadLine();
 
                         if (repeat == "S" || repeat == "s")
                         {
                             operador = "2";
-                        }
-                        else
-                        {
-                            return;
                         }
                         break;
 
@@ -88,15 +84,10 @@
 
                         Console.WriteLine("Deseja continuar? (S/N)");
                         repeat = Console.ReadLine();
-                        Console.ReadLine();
 
                         if (repeat == "S" || repeat == "s")
                         {
                             operador = "3";
-                        }
-                        else
-                        {
-                            return;
                         }
                         break;
 
@@ -124,19 +115,15 @@
 
                         Console.WriteLine("Deseja continuar? (S/N)");
                         repeat = Console.ReadLine();
-                        Console.ReadLine();
 
                         if (repeat == "S" || repeat == "s")
                         {
                             operador = "4";
                         }
-                        else
-                        {
-                            return;
-                        }
                         break;
                 }
             } while (controlador = true);
+            operador = Console.ReadLine();
         }
     }
 }
