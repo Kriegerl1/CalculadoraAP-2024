@@ -6,6 +6,13 @@ namespace CalculadoraConsoleApp
     {
         static void Main(string[] args)
         {
+            mostrarMenu();
+        }
+
+        static void mostrarMenu()
+        {
+            bool continuar;
+
             do
             {
                 Console.Clear();
@@ -41,16 +48,31 @@ namespace CalculadoraConsoleApp
                 }
 
                 Console.WriteLine("\nDeseja realizar outra operação? (S/N)");
-            } while (Console.ReadLine() == "S" || Console.ReadLine() == "s");
+                continuar = decisao();
+
+            } while (continuar);
+
+        }
+
+        static bool decisao()
+        {
+
+            string input = Console.ReadLine();
+            if (input == "S" || input == "s")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         static void Adicao()
         {
-            Console.WriteLine("Adição\nDigite o primeiro número:");
-            double primeiroNumero = Convert.ToDouble(Console.ReadLine());
+            double primeiroNumero = obterValor("Adição\nDigite o primeiro número:");
+            double segundoNumero = obterValor("Digite o segundo número:");
 
-            Console.WriteLine("Digite o segundo número:");
-            double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double resultado = primeiroNumero + segundoNumero;
             Console.WriteLine($"O resultado da adição é: {resultado.ToString("F")}");
@@ -58,11 +80,9 @@ namespace CalculadoraConsoleApp
 
         static void Subtracao()
         {
-            Console.WriteLine("Subtração\nDigite o primeiro número:");
-            double primeiroNumero = Convert.ToDouble(Console.ReadLine());
+            double primeiroNumero = obterValor("Subtração\nDigite o primeiro número:");
+            double segundoNumero = obterValor("Digite o segundo número:");
 
-            Console.WriteLine("Digite o segundo número:");
-            double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double resultado = primeiroNumero - segundoNumero;
             Console.WriteLine($"O resultado da subtração é: {resultado.ToString("F")}");
@@ -70,11 +90,9 @@ namespace CalculadoraConsoleApp
 
         static void Multiplicacao()
         {
-            Console.WriteLine("Multiplicação\nDigite o primeiro número:");
-            double primeiroNumero = Convert.ToDouble(Console.ReadLine());
+            double primeiroNumero = obterValor("Multiplicação\nDigite o primeiro número:");
+            double segundoNumero = obterValor("Digite o segundo número:");
 
-            Console.WriteLine("Digite o segundo número:");
-            double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double resultado = primeiroNumero * segundoNumero;
             Console.WriteLine($"O resultado da multiplicação é: {resultado.ToString("F")}");
@@ -82,11 +100,9 @@ namespace CalculadoraConsoleApp
 
         static void Divisao()
         {
-            Console.WriteLine("Divisão\nDigite o primeiro número:");
-            double primeiroNumero = Convert.ToDouble(Console.ReadLine());
+            double primeiroNumero = obterValor("Divisão\nDigite o primeiro número:");
+            double segundoNumero = obterValor("Digite o segundo número:");
 
-            Console.WriteLine("Digite o segundo número:");
-            double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             if (segundoNumero == 0)
             {
@@ -97,6 +113,15 @@ namespace CalculadoraConsoleApp
                 double resultado = primeiroNumero / segundoNumero;
                 Console.WriteLine($"O resultado da divisão é: {resultado.ToString("F")}");
             }
+        }
+
+        static double obterValor(string texto)
+        {
+            Console.WriteLine(texto);
+
+            double inputValor = Convert.ToDouble(Console.ReadLine());
+
+            return inputValor;
         }
     }
 }
